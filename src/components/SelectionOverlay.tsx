@@ -1,14 +1,15 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { InputNumber } from 'primereact/inputnumber';
 import { Button } from 'primereact/button';
 
 interface SelectionOverlayProps {
   onSelect: (count: number) => void;
-  trigger: React.ReactNode;
+  trigger: ReactNode;
 }
 
-export const SelectionOverlay: React.FC<SelectionOverlayProps> = ({ onSelect, trigger }) => {
+export const SelectionOverlay = ({ onSelect, trigger }: SelectionOverlayProps) => {
   const overlayRef = useRef<OverlayPanel>(null);
   const [count, setCount] = useState<number>(0);
 

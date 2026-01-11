@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import type { Artwork } from '../types/artwork';
@@ -6,7 +6,7 @@ import { fetchArtworksPage } from '../api/artworksApi';
 import { SelectedCountBadge } from './SelectedCountBadge';
 import { SelectionOverlay } from './SelectionOverlay';
 
-export const ArtworkTable: React.FC = () => {
+export const ArtworkTable = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [rowsPerPage] = useState<number>(12);
   const [totalRecords, setTotalRecords] = useState<number>(0);

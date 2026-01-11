@@ -1,10 +1,8 @@
-import React from 'react';
-
 interface SelectedCountBadgeProps {
   count: number;
 }
 
-export const SelectedCountBadge: React.FC<SelectedCountBadgeProps> = ({ count }) => {
+export const SelectedCountBadge = ({ count }: SelectedCountBadgeProps) => {
   return (
     <div style={{
       display: 'inline-flex',
